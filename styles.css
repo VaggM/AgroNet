@@ -1,0 +1,65 @@
+/* Ensuring full height for the page */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Prevent page scrolling */
+}
+
+/* For the map container to fill the right side */
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+/* For the left panel to have a fixed height and be scrollable */
+.left-panel {
+    height: 100vh; /* Set the height of the left panel to fill the viewport */
+    overflow-y: auto; /* Enable vertical scrolling for the left panel */
+}
+
+/* Dropdown menu styles */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown content styles */
+.dropdown-content {
+    position: absolute; /* Use absolute positioning for dropdowns */
+    background-color: white;
+    min-width: 160px;
+    z-index: 1;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 5px;
+    display: none; /* Initially hidden */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown when section is hovered */
+}
+
+/* Keep dropdown content visible on hover */
+.dropdown-content {
+    display: none; /* Hide by default */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show dropdown on parent hover */
+}
+
+/* Ensure the dropdown remains visible while hovering over its content */
+.dropdown-content:hover {
+    display: block; /* Keep it displayed when hovering over dropdown content */
+}
+
+.dropdown-content label {
+    display: block;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.dropdown-content label:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}

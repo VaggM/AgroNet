@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agronet - Home</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <style>
+        /* Ensuring full height for the page */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            overflow: hidden; /* Prevent page scrolling */
+        }
+
+        /* For the map container to fill the right side */
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+
+        /* For the left panel to have a fixed height and be scrollable */
+        .left-panel {
+            height: 100vh; /* Set the height of the left panel to fill the viewport */
+            overflow-y: auto; /* Enable vertical scrolling for the left panel */
+            position: relative; /* Position relative for absolute positioning of dropdowns */
+        }
+
+        /* For scrollable dropdown content */
+        .dropdown-content {
+            max-height: 200px; /* Maximum height for scrolling */
+            overflow-y: auto;  /* Enable vertical scrolling */
+        }
+    </style>
+</head>
+
+<body class="h-full flex flex-col">
+
+    <!-- Navigation bar -->
+    <nav class="bg-green-600 text-white p-4 flex justify-between items-center">
+        <div class="text-xl font-bold">Agronet</div>
+        <ul class="flex space-x-4">
+            <li><a href="#" class="hover:text-gray-200">Home</a></li>
+            <li><a href="#" class="hover:text-gray-200">Profile</a></li>
+            <li><a href="#" class="hover:text-gray-200">Project Info</a></li>
+            <li><a href="#" class="hover:text-gray-200">Team About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="flex-grow flex">
+        <!-- Left Panel (Scrollable) -->
+        <div class="w-96 bg-gray-100 p-4 left-panel">
+            <!-- DateTime Section -->
+            <div class="mb-4">
+                <h2 class="text-xl font-semibold mb-2 cursor-pointer flex justify-between items-center" id="datetime-header">
+                    DateTime
+                    <span id="datetime-display" class="text-gray-600"></span>
+                </h2>
+                <div id="datetime-content" class="hidden dropdown-content">
+                    <input type="date" id="date-input" class="w-full p-2 border border-gray-300 rounded">
+                    <input type="time" id="time-input" class="w-full p-2 border border-gray-300 rounded mt-2">
+                </div>
+            </div>
+
+            <!-- Layers Section -->
+            <div class="mb-4">
+                <h2 class="text-xl font-semibold mb-2 cursor-pointer flex justify-between items-center" id="layers-header">
+                    Layers
+                </h2>
+                <div id="layers-content" class="hidden dropdown-content">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" id="satellite-checkbox" class="form-checkbox h-5 w-5" checked>
+                        <span>Satellite Layer</span>
+                    </label>
+                    <label class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" id="sensor-checkbox" class="form-checkbox h-5 w-5" checked>
+                        <span>Sensor Layer</span>
+                    </label>
+                    <label class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" id="user-checkbox" class="form-checkbox h-5 w-5" checked>
+                        <span>User Layer</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Applications Section -->
+            <div class="mb-4">
+                <h2 class="text-xl font-semibold mb-2 cursor-pointer flex justify-between items-center" id="applications-header">
+                    Applications
+                </h2>
+                <div id="applications-content" class="hidden dropdown-content">
+                    <label class="flex items-center space-x-2">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span>Crops</span>
+                    </label>
+                    <label class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span>Soil</span>
+                    </label>
+                    <label class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span>Atmosphere</span>
+                    </label>
+                    <label class="flex items-center space-x-2 mt-2">
+                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <span>Pests</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Data Visualization Section -->
+            <div class="mt-6 border-t pt-4">
+                <h3 class="text-lg font-semibold mb-2">Data Visualization</h3>
+                <p>Visualization options coming soon!</p>
+            </div>
+
+            <!-- Alerts Section -->
+            <div class="mt-4 border-t pt-4">
+                <h3 class="text-lg font-semibold mb-2">Alerts</h3>
+                <div class="flex items-center space-x-2">
+                    <span class="text-red-600">🐞</span>
+                    <span class="text-orange-600">⚠️</span>
+                    <span class="text-yellow-600">🔥</span>
+                </div>
+                <button class="mt-2 bg-green-500 text-white px-4 py-2 rounded">Advanced Settings</button>
+            </div>
+        </div>
+
+        <!-- Right Side: Map -->
+        <div class="flex-grow">
+            <div id="map"></div>
+        </div>
+    </div>
+
+    <script src="./map.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
