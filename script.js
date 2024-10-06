@@ -27,7 +27,6 @@ window.addEventListener('click', (e) => {
     }
 });
 
-// Handle date and time input
 document.getElementById('date-input').addEventListener('change', updateDateTimeDisplay);
 document.getElementById('time-input').addEventListener('change', updateDateTimeDisplay);
 

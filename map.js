@@ -38,14 +38,14 @@ sensorGroup.addTo(map);
 
 // User Layer (Single point and circle)
 const userGroup = L.layerGroup();
-const userLatLng1 = [38.75, 23.52];
-const userLatLng2 = [38.70, 23.55];
+// const userLatLng1 = [38.75, 23.52];
+// const userLatLng2 = [38.70, 23.55];
 
-L.circle(userLatLng1, { radius: 3000, color: `hsl(${(0.8) * 120}, 100%, 50%)`, fillOpacity: 0.2 }).addTo(userGroup); // Radius in meters
-L.marker(userLatLng1, { color: `hsl(${(0.8) * 120}, 100%, 50%)` }).addTo(userGroup);
+// L.circle(userLatLng1, { radius: 3000, color: `hsl(${(0.8) * 120}, 100%, 50%)`, fillOpacity: 0.2 }).addTo(userGroup); // Radius in meters
+// L.marker(userLatLng1, { color: `hsl(${(0.8) * 120}, 100%, 50%)` }).addTo(userGroup);
 
-L.circle(userLatLng2, { radius: 3000, color: `hsl(${(0.5) * 120}, 100%, 50%)`, fillOpacity: 0.2 }).addTo(userGroup); // Radius in meters
-L.marker(userLatLng2, { color: `hsl(${(0.8) * 120}, 100%, 50%)` }).addTo(userGroup);
+// L.circle(userLatLng2, { radius: 3000, color: `hsl(${(0.5) * 120}, 100%, 50%)`, fillOpacity: 0.2 }).addTo(userGroup); // Radius in meters
+// L.marker(userLatLng2, { color: `hsl(${(0.8) * 120}, 100%, 50%)` }).addTo(userGroup);
 
 userGroup.addTo(map);
 
@@ -65,3 +65,35 @@ function toggleLayer(checkboxId, layerGroup) {
 toggleLayer('satellite-checkbox', satelliteGroup);
 toggleLayer('sensor-checkbox', sensorGroup);
 toggleLayer('user-checkbox', userGroup);
+
+// Function to generate random coordinates within a specified range
+function getRandomLatLng(lat, lng, range) {
+    const randomLat = lat + (Math.random() - 0.5) * range; // Random lat within the range
+    const randomLng = lng + (Math.random() - 0.5) * range; // Random lng within the range
+    return [randomLat, randomLng];
+}
+
+// Function to add alert markers to the map
+function addAlertMarker(latlng, color, emoji) {
+    // Create a marker with the emoji
+    const marker = L.marker(latlng, { icon: L.divIcon({ className: 'custom-icon', html: emoji, iconSize: [30, 30] }) }).addTo(userGroup);
+
+    // Add a circle around the marker
+    L.circle(latlng, { radius: 3000, color: color, fillOpacity: 0.2 }).addTo(userGroup);
+}
+
+// Event listeners for alert buttons
+document.getElementById('alert-worm').addEventListener('click', function () {
+    const randomLocation = getRandomLatLng(38.75, 23.55, 0.1); // Random location within 0.02 degrees
+    addAlertMarker(randomLocation, 'green', '🐛'); // Green worm emoji
+});
+
+// document.getElementById('alert-warning').addEventListener('click', function () {
+//     const randomLocation = getRandomLatLng(38.75, 23.55, 0.1); // Random location within 0.02 degrees
+//     addAlertMarker(randomLocation, 'orange', '⚠️'); // Warning emoji
+// });
+
+document.getElementById('alert-fire').addEventListener('click', function () {
+    const randomLocation = getRandomLatLng(38.75, 23.55, 0.1); // Random location within 0.02 degrees
+    addAlertMarker(randomLocation, 'red', '🔥'); // Fire emoji
+});

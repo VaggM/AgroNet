@@ -14,34 +14,7 @@
     <!-- Leaflet JS -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
-    <style>
-        /* Ensuring full height for the page */
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            overflow: hidden; /* Prevent page scrolling */
-        }
-
-        /* For the map container to fill the right side */
-        #map {
-            height: 100%;
-            width: 100%;
-        }
-
-        /* For the left panel to have a fixed height and be scrollable */
-        .left-panel {
-            height: 100vh; /* Set the height of the left panel to fill the viewport */
-            overflow-y: auto; /* Enable vertical scrolling for the left panel */
-            position: relative; /* Position relative for absolute positioning of dropdowns */
-        }
-
-        /* For scrollable dropdown content */
-        .dropdown-content {
-            max-height: 200px; /* Maximum height for scrolling */
-            overflow-y: auto;  /* Enable vertical scrolling */
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body class="h-full flex flex-col">
@@ -80,15 +53,15 @@
                 </h2>
                 <div id="layers-content" class="hidden dropdown-content">
                     <label class="flex items-center space-x-2">
-                        <input type="checkbox" id="satellite-checkbox" class="form-checkbox h-5 w-5" checked>
+                        <input type="checkbox" id="satellite-checkbox" class="form-checkbox h-5 w-5">
                         <span>Satellite Layer</span>
                     </label>
                     <label class="flex items-center space-x-2 mt-2">
-                        <input type="checkbox" id="sensor-checkbox" class="form-checkbox h-5 w-5" checked>
+                        <input type="checkbox" id="sensor-checkbox" class="form-checkbox h-5 w-5">
                         <span>Sensor Layer</span>
                     </label>
                     <label class="flex items-center space-x-2 mt-2">
-                        <input type="checkbox" id="user-checkbox" class="form-checkbox h-5 w-5" checked>
+                        <input type="checkbox" id="user-checkbox" class="form-checkbox h-5 w-5">
                         <span>User Layer</span>
                     </label>
                 </div>
@@ -126,15 +99,22 @@
             </div>
 
             <!-- Alerts Section -->
-            <div class="mt-4 border-t pt-4">
+            <div class="mt-4 border-t pt-4" style="margin-bottom: 75px;">
                 <h3 class="text-lg font-semibold mb-2">Alerts</h3>
                 <div class="flex items-center space-x-2">
-                    <span class="text-red-600">🐞</span>
-                    <span class="text-orange-600">⚠️</span>
-                    <span class="text-yellow-600">🔥</span>
+                    <button id="alert-worm" class="bg-green-500 text-white rounded p-2 hover:bg-green-600">
+                        🐛
+                    </button>
+                    <!-- <button id="alert-warning" class="bg-orange-500 text-white rounded p-2 hover:bg-orange-600">
+                        ⚠️
+                    </button> -->
+                    <button id="alert-fire" class="bg-red-500 text-white rounded p-2 hover:bg-red-600">
+                        🔥
+                    </button>
                 </div>
-                <button class="mt-2 bg-green-500 text-white px-4 py-2 rounded">Advanced Settings</button>
             </div>
+
+
         </div>
 
         <!-- Right Side: Map -->
