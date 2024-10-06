@@ -86,7 +86,7 @@
                         <span>Atmosphere</span>
                     </label>
                     <label class="flex items-center space-x-2 mt-2">
-                        <input type="checkbox" class="form-checkbox h-5 w-5">
+                        <input type="checkbox" class="form-checkbox h-5 w-5" checked>
                         <span>Pests</span>
                     </label>
                 </div>
@@ -94,8 +94,34 @@
 
             <!-- Data Visualization Section -->
             <div class="mt-6 border-t pt-4">
-                <h3 class="text-lg font-semibold mb-2">Data Visualization</h3>
-                <p>Visualization options coming soon!</p>
+                <h3 class="text-lg font-semibold mb-5">Data Visualization</h3>
+                
+                    <div class="mb-2 mt-4">
+                        <span class="font-semibold">Coordinates: </span>
+                        <span>[23.5, 38.7] [23.6, 38.8]</span>
+                    </div>
+                    <div class="mb-2">
+                        <span class="font-semibold">Geolocation: </span>
+                        <span>Pili, Evoia, Greece</span>
+                    </div>
+                    <div class="mb-2 flex items-center">
+                        <span class="font-semibold">Average Temperature: </span>
+                        <span class="ml-2 px-3 py-1 bg-yellow-200 text-yellow-700 rounded-full">
+                            34 ℃ - Average
+                        </span>
+                    </div>
+                    <div class="mb-2 flex items-center">
+                        <span class="font-semibold">Average Humidity: </span>
+                        <span class="ml-2 px-3 py-1 bg-pink-200 text-pink-700 rounded-full">
+                            85% - High
+                        </span>
+                    </div>
+                    <div class="flex items-center">
+                        <span class="font-semibold">Pest Indicator: </span>
+                        <span class="ml-2 px-3 py-1 bg-red-200 text-red-700 rounded-full">
+                            High
+                        </span>
+                    </div>
             </div>
 
             <!-- Alerts Section -->
@@ -105,9 +131,6 @@
                     <button id="alert-worm" class="bg-green-500 text-white rounded p-2 hover:bg-green-600">
                         🐛
                     </button>
-                    <!-- <button id="alert-warning" class="bg-orange-500 text-white rounded p-2 hover:bg-orange-600">
-                        ⚠️
-                    </button> -->
                     <button id="alert-fire" class="bg-red-500 text-white rounded p-2 hover:bg-red-600">
                         🔥
                     </button>

@@ -39,3 +39,30 @@ function updateDateTimeDisplay() {
         document.getElementById('datetime-display').textContent = datetimeString;
     }
 }
+
+// Function to generate random coordinates within a specified range
+function getRandomLatLng(lat, lng, range) {
+    const randomLat = lat + (Math.random() - 0.5) * range; // Random lat within the range
+    const randomLng = lng + (Math.random() - 0.5) * range; // Random lng within the range
+    return [randomLat, randomLng];
+}
+
+// Function to add alert markers to the map
+function addAlertMarker(latlng, color, emoji) {
+    // Create a marker with the emoji
+    const marker = L.marker(latlng, { icon: L.divIcon({ className: 'custom-icon', html: emoji, iconSize: [30, 30] }) }).addTo(userGroup);
+
+    // Add a circle around the marker
+    L.circle(latlng, { radius: 3000, color: color, fillOpacity: 0.2 }).addTo(userGroup);
+}
+
+// Event listeners for alert buttons
+document.getElementById('alert-worm').addEventListener('click', function () {
+    const randomLocation = getRandomLatLng(38.75, 23.55, 0.1); // Random location within 0.1 degrees
+    addAlertMarker(randomLocation, 'green', '🐛'); // Green worm emoji
+});
+
+document.getElementById('alert-fire').addEventListener('click', function () {
+    const randomLocation = getRandomLatLng(38.75, 23.55, 0.1); // Random location within 0.1 degrees
+    addAlertMarker(randomLocation, 'red', '🔥'); // Fire emoji
+});
