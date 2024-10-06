@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="h-screen bg-gray-100">
       {/* Navbar */}
-      <nav className="bg-blue-500 text-white py-4 shadow-md">
+      <nav className="bg-green-new text-white py-4 shadow-md" style="">
         <div className="container mx-auto flex justify-left space-x-8">
           <NavItem
             title="Home"
