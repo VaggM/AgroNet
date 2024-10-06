@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/VaggM/AgriNet.git/static/css/main.41b1bc0d.css",
-    "main.js": "/VaggM/AgriNet.git/static/js/main.0ca8ab20.js",
-    "index.html": "/VaggM/AgriNet.git/index.html",
-    "main.41b1bc0d.css.map": "/VaggM/AgriNet.git/static/css/main.41b1bc0d.css.map",
-    "main.0ca8ab20.js.map": "/VaggM/AgriNet.git/static/js/main.0ca8ab20.js.map"
+    "main.css": "/VaggM/AgroNet.git/static/css/main.41b1bc0d.css",
+    "main.js": "/VaggM/AgroNet.git/static/js/main.0ca8ab20.js",
+    "index.html": "/VaggM/AgroNet.git/index.html",
+    "main.41b1bc0d.css.map": "/VaggM/AgroNet.git/static/css/main.41b1bc0d.css.map",
+    "main.0ca8ab20.js.map": "/VaggM/AgroNet.git/static/js/main.0ca8ab20.js.map"
   },
   "entrypoints": [
     "static/css/main.41b1bc0d.css",
