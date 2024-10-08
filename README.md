@@ -1,4 +1,4 @@
-![εικόνα](https://github.com/user-attachments/assets/3394dfae-59fc-4a9e-91a5-05f273a914cc)# AgroNet 🌱🚀
+# AgroNet 🌱🚀
 
 AgroNet is a web application created by our team for the hackathon **NASA Space Apps Challenge Athens**. The project focuses on providing farmers in Evoia, Greece with vital information about the risk level of green bollworm infestations in their cotton fields.
 
