@@ -33,7 +33,7 @@ Farmers can also contribute by pressing a Worm Alert Button, which will increase
 
 # 📷 Screenshots
 
-[!test](./screenshot.png)
+![Screenshot](https://github.com/user-attachments/assets/6d15017a-599d-471e-88b5-3a1be722e665)
 
 # 👥 Team Members
 
