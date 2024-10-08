@@ -31,19 +31,19 @@ Farmers can also contribute by pressing a Worm Alert Button, which will increase
     Advanced Machine Learning: Implement a robust machine learning model using field-specific data for more accurate predictions.
     Mobile App: Develop a mobile version of AgroNet for on-the-go access by farmers.
 
+# 📷 Screenshots
+
+[!test](./screenshot.png)
+
+# 👥 Team Members
+
+- [Zenia Fragaki](https://www.linkedin.com/in/zenia-fragaki-7a7b21219/)
+- [Stella Velesiotou](https://www.linkedin.com/in/stella-velesiotou-056674280/)
+- [Marina Tsiokou](https://www.linkedin.com/in/marina-tsiokou-8b8141298/)
+- [Evangelos Mitikas](https://www.linkedin.com/in/evangelos-mitikas/)
+- [Paris Kazakis](https://www.linkedin.com/in/paris-kazakis-0226a5241/)
+- [Charis Chalkiadakis](https://www.linkedin.com/in/charischalkiadakis/)
 
 # 📜 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-# 📷 Screenshots
-
-Coming soon!
-
-# 📞 Team
-
-For any questions or suggestions, feel free to reach out to the team at:
-
-    Email: agronet.team@example.com
-    GitHub Issues: AgroNet Issues
-    
