@@ -50,4 +50,4 @@ Farmers can also contribute by pressing a Worm Alert Button, which will increase
 
 # 📜 License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
