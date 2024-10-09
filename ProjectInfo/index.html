@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agronet - Home</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <!-- <link rel="stylesheet" href="./styles.css" /> -->
+
+</head>
+
+<body class="h-full flex flex-col">
+
+    <!-- Navigation bar -->
+    <nav class="bg-green-600 text-white p-4 flex items-center">
+        <div class="text-xl font-bold">
+            <a href="/" class="hover:text-gray-200 mr-5">Agronet</a>
+        </div>
+        <ul class="flex space-x-4">
+            <!-- <li><a href="#" class="hover:text-gray-200">Profile</a></li> -->
+            <li><a href="/ProjectInfo" class="hover:text-gray-200">Project Info</a></li>
+            <li><a href="/TeamAbout" class="hover:text-gray-200">Team About</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="flex-grow flex flex-col p-8 bg-gray-100">
+        <h1 class="text-4xl font-bold mb-6">AgroNet 🌱🚀</h1>
+        <p class="mb-6">
+            AgroNet is a web application created by our team for the hackathon <strong>NASA Space Apps Challenge Athens</strong>. 
+            The project focuses on providing farmers in Evoia, Greece with vital information about the risk level of green bollworm infestations 
+            in their cotton fields.
+        </p>
+        <p class="mb-6">
+            By leveraging satellite data and local sensor inputs, AgroNet helps farmers make informed decisions on when to check their fields and optimize 
+            pesticide use, reducing the environmental impact while protecting crops from pests.
+        </p>
+
+        <!-- Project Overview -->
+        <h2 class="text-3xl font-semibold mt-8 mb-4">🚜 Project Overview</h2>
+        <p class="mb-6">
+            Cotton farmers need to monitor the presence of green bollworms in their fields regularly. While pesticides can be used to manage these pests, 
+            excessive use can harm the plants and ecosystem. Farmers must balance between early detection and limited pesticide application.
+        </p>
+        <p class="mb-6">
+            AgroNet addresses this challenge by creating a bollworm danger level indicator based on:
+        </p>
+        <ul class="list-disc ml-6 mb-6 space-y-2">
+            <li><strong>NASA Satellite Temperature Data:</strong> Bollworm populations increase within a specific temperature range.</li>
+            <li><strong>NASA NDVI Data:</strong> Areas with denser flora tend to attract more pests.</li>
+            <li><strong>Local Farm Sensor Data (optional):</strong> Additional sensors can be deployed across farms to improve the resolution of the indicator, measuring parameters like temperature and soil moisture.</li>
+        </ul>
+        <p class="mb-6">
+            By using machine learning, AgroNet can dynamically adjust the weights of these factors (temperature, flora, sensor data) based on real-world field data.
+        </p>
+        <p class="mb-6">
+            Farmers can also contribute by pressing a <strong>Worm Alert Button</strong>, which will increase the danger level in their area, refining the indicator for nearby farms.
+        </p>
+
+        <!-- Features -->
+        <h2 class="text-3xl font-semibold mt-8 mb-4">🌟 Features</h2>
+        <ul class="list-disc ml-6 mb-6 space-y-2">
+            <li><strong>Bollworm Danger Level Indicator:</strong> A calculated risk score using satellite data, sensor inputs, and user alerts.</li>
+            <li><strong>User-Driven Alerts:</strong> Farmers can send alerts if they notice increased bollworm activity in their fields, enhancing community awareness.</li>
+            <li><strong>Fire Alerts:</strong> Real-time fire alerts to help farmers protect their crops from sudden fires.</li>
+            <li><strong>Machine Learning for Accuracy:</strong> A simple machine learning model is proposed to adjust the weighted sum of data layers based on real-world field data.</li>
+        </ul>
+
+        <!-- Future Improvements -->
+        <h2 class="text-3xl font-semibold mt-8 mb-4">🛠️ Future Improvements</h2>
+        <ul class="list-disc ml-6 mb-6 space-y-2">
+            <li>Sensor Integration: Add support for IoT-based sensors to track real-time environmental factors like temperature and humidity.</li>
+            <li>Advanced Machine Learning: Implement a robust machine learning model using field-specific data for more accurate predictions.</li>
+            <li>Mobile App: Develop a mobile version of AgroNet for on-the-go access by farmers.</li>
+        </ul>
+
+        <!-- Screenshots -->
+        <h2 class="text-3xl font-semibold mt-8 mb-4">📷 Screenshots</h2>
+        <div class="flex flex-col space-y-6">
+            <div class="text-center">
+                <img src="/screenshots/ScreenshotNDVI.png" 
+                    alt="Screenshot NDVI" 
+                    class="w-1/2 md:w-1/3 lg:w-1/4 mx-auto rounded-lg shadow-md">
+                <p class="mt-2 text-gray-700">NDVI Data Visualization - Green areas represent high vegetation density. The marked squared display areas with temperature that benefits bollworm population increase.</p>
+            </div>
+            <div class="text-center">
+                <img src="/screenshots/ScreenshotWEB.png" 
+                    alt="Screenshot Web" 
+                    class="w-1/2 md:w-1/3 lg:w-1/4 mx-auto rounded-lg shadow-md">
+                <p class="mt-2 text-gray-700">Web Interface - Real-time bollworm danger level indicator and user alerts.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -22,12 +22,12 @@
     <!-- Navigation bar -->
     <nav class="bg-green-600 text-white p-4 flex items-center">
         <div class="text-xl font-bold">
-            <a href="#" class="hover:text-gray-200 mr-5">Agronet</a>
+            <a href="/" class="hover:text-gray-200 mr-5">Agronet</a>
         </div>
         <ul class="flex space-x-4">
-            <li><a href="#" class="hover:text-gray-200">Profile</a></li>
-            <li><a href="#" class="hover:text-gray-200">Project Info</a></li>
-            <li><a href="#" class="hover:text-gray-200">Team About</a></li>
+            <!-- <li><a href="#" class="hover:text-gray-200">Profile</a></li> -->
+            <li><a href="/ProjectInfo" class="hover:text-gray-200">Project Info</a></li>
+            <li><a href="/TeamAbout" class="hover:text-gray-200">Team About</a></li>
         </ul>
     </nav>
 
@@ -52,17 +52,17 @@
                 <h2 class="text-xl font-semibold mb-2 cursor-pointer flex justify-between items-center" id="layers-header">
                     Layers
                 </h2>
-                <div id="layers-content" class="hidden dropdown-content">
+                <div id="layers-content" class="dropdown-content">
                     <label class="flex items-center space-x-2">
-                        <input type="checkbox" id="satellite-checkbox" class="form-checkbox h-5 w-5">
+                        <input type="checkbox" id="satellite-checkbox" class="form-checkbox h-5 w-5" checked>
                         <span>Satellite Layer</span>
                     </label>
                     <label class="flex items-center space-x-2 mt-2">
-                        <input type="checkbox" id="sensor-checkbox" class="form-checkbox h-5 w-5">
+                        <input type="checkbox" id="sensor-checkbox" class="form-checkbox h-5 w-5" checked>
                         <span>Sensor Layer</span>
                     </label>
                     <label class="flex items-center space-x-2 mt-2">
-                        <input type="checkbox" id="user-checkbox" class="form-checkbox h-5 w-5">
+                        <input type="checkbox" id="user-checkbox" class="form-checkbox h-5 w-5" checked>
                         <span>User Layer</span>
                     </label>
                 </div>
@@ -73,7 +73,7 @@
                 <h2 class="text-xl font-semibold mb-2 cursor-pointer flex justify-between items-center" id="applications-header">
                     Applications
                 </h2>
-                <div id="applications-content" class="hidden dropdown-content">
+                <div id="applications-content" class="dropdown-content">
                     <label class="flex items-center space-x-2">
                         <input type="checkbox" class="form-checkbox h-5 w-5">
                         <span>Crops</span>
